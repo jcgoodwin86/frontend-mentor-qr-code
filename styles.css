@@ -1,0 +1,152 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Variables */
+:root {
+  /* Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+
+  /* Spacing */
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
+}
+
+/* Global */
+
+body {
+  background-color: var(--slate-300);
+  font-family: Outfit;
+  font-weight: 400;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  max-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+/* Card */
+
+.card {
+  border-radius: 20px;
+  background: var(--color-white, #fff);
+
+  /* card-shadow */
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  padding: var(--spacing-200, 16px) var(--spacing-200, 16px)
+    var(--spacing-500, 40px) var(--spacing-200, 16px);
+  flex-direction: column;
+  gap: var(--spacing-300, 24px);
+}
+
+.qr-code {
+  max-width: 288px;
+  border-radius: 10px;
+}
+
+.card-text {
+  max-width: 288px;
+  display: flex;
+  padding: 0px var(--spacing-200, 16px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-200, 16px);
+  align-self: stretch;
+}
+
+.card-text h1 {
+  color: var(--color-slate-900, #1f314f);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  align-self: stretch;
+
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 26.4px */
+}
+
+.card-text p {
+  color: var(--color-slate-500, #68778d);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+
+  /* text-preset-2 */
+  font-family: Outfit;
+  font-size: var(--font-size-text-preset-2, 15px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 21px */
+  letter-spacing: 0.2px;
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: var(--spacing-500, 40px);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
